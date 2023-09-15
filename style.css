@@ -56,7 +56,8 @@ nav {
     text-transform: uppercase;
     font-weight: bold;
     line-height: 40px;
-    padding-left: 1%;
+    padding-left: 3%;
+
 }
 
 nav a:link,
@@ -64,7 +65,7 @@ nav a:visited {
     text-decoration: solid;
     color: black;
     transition: background-color 1s;
-    padding: 1%;
+    padding: 2%;
     min-height: inherit;
     display: flex;
     justify-content: center;
@@ -79,22 +80,97 @@ nav a:focus {
     background-color: #D504D9;
     color: #000;
     transition: inherit;
-    border-radius: 5%;
+    border-radius: 7%;
 }
 
 /*inicio/ entrada*/
 
-#inicio {
-    /* background-image: url(imagens/backgroundInicio480px.png); */
+/* #inicio {
+    /* background-image: url(imagens/backgroundInicio480px.png); 
     width: 100%;
     min-width: 480px;
     min-height: 260px;
-}
+} */
 
 hr {
     height: 12px;
     width: 100%;
     background-color: #7eebeb;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev1, .next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev1:hover, .next1:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.on {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .on:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev1, .next1,.text {font-size: 11px}
 }
 
 /*o que fazemos*/
@@ -155,7 +231,7 @@ opacity: 1;
 #projetos{
     background-color: #7eebeb;
     width: 100%;
-    height: 50px;
+    height: 60px;
     margin-top: 5%;    
     margin-bottom: 5%;
     padding: 1%;
@@ -492,7 +568,7 @@ opacity: 1;
 input, textarea{
     width: 100%;
     /* background-color: #4CAF50; */
-    color: white;
+    color: black;
     /* padding: 14px 20px; */
     margin: 8px 0;
     border: none;
@@ -512,6 +588,10 @@ input[type=text], select {
 
   #limpar, #enviar{
     background-color: #c073c2;
+    border: solid #c073c2 12px;
+    border-radius: 12%;
+    color: #F2F2F2;
+    margin: 1%;
 
   }
 
@@ -527,13 +607,26 @@ input[type=text], select {
 
  
 
-#form-contato a:hover,
+#form-contato a:hover
 #form-con a:focus {
-    background-color: #c073c2;
+    background-color: #4a71a5;
     color: #000;
     /* transition: inherit; */
     border-radius: 5%;
 
+}
+
+#form-contato button {
+  border: none;
+  padding: 2%;
+  background-color: #c073c2;
+  color: white;
+}
+
+#form-contato button:hover,
+#form-contato button:focus {
+  background-color: #D504D9;
+  cursor: pointer;
 }
 
 #form-contato input{
@@ -584,6 +677,9 @@ h2{
   h2{
     font-size: 2em;
   }
+  .accordion{
+    font-size: 1.5em;
+  }
   
   .fotoEquipe {
     display: flex;
@@ -601,24 +697,11 @@ h2{
     align-items: center;
 }
 
-/* .fotoEquipe img, .Clientes img{
-  margin-left: 90px;
-} */
-
 .conteudo-info{
   justify-content: center;
   text-align: center;
 }
 
-.imagemCodigo img{
-  display: block;
-  border-radius: 15px;
-  width: 100%;
-  min-width: 200px;   
-  max-width: 520px;
-  /* margin-top: 20px; */
-  opacity: 1.0;
-}
 .flexComoFaz{
   display: flex;
   margin: 2%;
@@ -645,6 +728,15 @@ h2{
     align-items: center;
 }
 
+.imagemCodigo img{
+  display: block;
+  border-radius: 15px;
+  width: 100%;
+  min-width: 200px;   
+  max-width: 520px;
+  /* margin-top: 20px; */
+  opacity: 1.0;
+}
 
 
 }
